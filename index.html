@@ -6,6 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Proyecto Final</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            .acordeon{
+                background-color: rgb(225, 108, 225);
+                cursor: pointer;
+                padding: 20px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            .active, .acordeon:hover{
+                background-color: white;
+
+            }
+
+            .contenidotextos{
+                padding: 0px 20px;
+                display: none;
+                overflow:hidden;
+                font-family: 'La Belle Aurore';
+    
+}
+    
+        </style>
     </head>
     <body>
     <header>
@@ -34,25 +61,49 @@
 
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">QUIÉNES SOMOS</h2>
+                <button class="acordeon"> Nuestro objetivo</button>
+                <div class="contenidotextos">
                     
-                <div class="contenido-textos">
-                    
-                        <p>Somos un centro educativo donde atendemos a niños en edades comprendidas entre los cuatro meses y tres años, organizados por grupos de edades, dentro de un entorno cálido y estimulante hecho a su medida; con un planteamiento que responda a sus necesidades y a las de la familia y que tenga especial cuidado en la alimentación, el reposo, la higiene y el juego.
-
-                        La guardería está autorizada por el departamento de enseñanza.
-                            
-                        Tenemos autorización sanitaria.
-                        Tenemos controles de inspección:
-                        Cocina, para el control de limpieza y mantenimiento.
-                        Por parte de Enseñanza por la cuestión pedagógica, de número de niños y personal docente.
-                        Cumplimos con todos los requisitos de seguridad especificados por el Departamento de enseñanza y Salud.
-                        </p>
-                        
-                    </div>
-
+                        <p> Nuestro objetivo principal es estimular el desarrollo de las capacidades intelectuales, motrices, sociales y emocionales de los niños y niñas. Potenciar la creatividad, el interés y la curiosidad por descubrir y garantizar  y cubrir sus necesidades fisiológicas.
+                        </p>  
                 </div>
+
+                <button class="acordeon"> Nuestra misión</button>
+                <div class="contenidotextos">
+                    
+                        <p>Ofrecer un servicio educativo de calidad que promueva una educación activa, abierta e integral del niño/a, formándole en valores morales, éticos y culturales que le ayuden a desarrollar todo su potencial personal y talento, involucrando y trabajando conjuntamente en este proceso con las familias.</p>  
+                </div>
+
+                <button class="acordeon"> Nuestros valores</button>
+                <div class="contenidotextos">
+            
+                        <ul>
+                            <li>Amor: respeto, comprensión, acompañamiento y especial atención  a los más desfavorecidos.</li>
+                            <li> Alegría: entusiasmo y sentido de fiesta.</li>
+                            <li>Sencillez y humildad: cercanía y cordialidad en el trato.</li>
+                            <li>Paciencia: saber esperar cada proceso y saber escuchar.</li>
+                            <li>Búsqueda de la Verdad: coherencia, objetividad y sentido crítico.</li>
+                            
+                        </ul>       
+                </div>
+                
         </section>
         
+        <script>
+            let elementosAcordeon = document.getElementsByClassName("acordeon");
+            
+            for (let i = 0; i< elementosAcordeon.length; i++){
+                elementosAcordeon[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+                let contenidotextos = this.nextElementSibling;
+                if (contenidotextos.style.display =="block"){
+                    contenidotextos.style.display = "none";
+                } else{
+                    contenidotextos.style.display = "block";
+                }
+                });
+            }
+        </script>
         
         
         <section class="equipo-contendor">
