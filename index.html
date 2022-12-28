@@ -64,7 +64,7 @@
                 <button class="acordeon"> Nuestro objetivo</button>
                 <div class="contenidotextos">
                     
-                        <p> Nuestro objetivo principal es estimular el desarrollo de las capacidades intelectuales, motrices, sociales y emocionales de los niños y niñas. Potenciar la creatividad, el interés y la curiosidad por descubrir y garantizar  y cubrir sus necesidades fisiológicas.
+                    <p> Nuestro objetivo principal es estimular el desarrollo de las        capacidades intelectuales, motrices, sociales y emocionales de los niños y niñas. Potenciar la creatividad, el interés y la curiosidad por descubrir y garantizar  y cubrir sus necesidades fisiológicas.
                         </p>  
                 </div>
 
@@ -88,22 +88,9 @@
                 </div>
                 
         </section>
+        <script src="acordeon.js"></script>
+
         
-        <script>
-            let elementosAcordeon = document.getElementsByClassName("acordeon");
-            
-            for (let i = 0; i< elementosAcordeon.length; i++){
-                elementosAcordeon[i].addEventListener("click",function(){
-                this.classList.toggle("active");
-                let contenidotextos = this.nextElementSibling;
-                if (contenidotextos.style.display =="block"){
-                    contenidotextos.style.display = "none";
-                } else{
-                    contenidotextos.style.display = "block";
-                }
-                });
-            }
-        </script>
         
         
         <section class="equipo-contendor">
