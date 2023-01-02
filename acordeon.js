@@ -11,3 +11,8 @@ let elementosAcordeon = document.getElementsByClassName("acordeon");
                 }
                 });
             }
+
+
+
+
+    

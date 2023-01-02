@@ -398,4 +398,28 @@ footer{
  }
 }
 
+/*acordeon*/
+.acordeon{
+    background-color: rgb(225, 108, 225);
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.active, .acordeon:hover{
+    background-color: white;
+
+}
+
+.contenidotextos{
+    padding: 0px 20px;
+    display: none;
+    overflow:hidden;
+    font-family: 'Times New Roman', Times, serif;}
+
 
