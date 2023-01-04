@@ -13,39 +13,57 @@
             <h2>¡Contacta con nosotros!</h2>
         </div>
         <form id="formulario" action="" method="">
-            <div class="form-control">
-                <label for="nombre">Nombre</label>
-                <input id="nombre" type="text">
-                <p></p>
-            </div>
+            <div class="formcontrol">
 
-            <div class="form-control">
-                <label for="apellidos">Apellidos</label>
-                <input id="apellidos" type="text">
-                <p></p>
-            </div>
+            <fieldset>
 
-            <div class="form-control">
-                <label for="descripcion">Descripción</label>
+                <legend>Datos básicos</legend>
+                <label for="fname">Nombre</label><br>
+                <input required type="text" id="fname" name="fname" pattern="[a-z A-Z]+">
+                
+                   
+                
+                <label for="apellido">Apellidos</label>
+                <input type="text" id="apellido" name="apellido">
+
+                <label for="descripcion">comentarios</label>
                 <input id="descripcion" type="text">
-                <p></p>
-            </div>
 
-            <div class="form-control">
                 <label for="email">Correo electrónico</label>
                 <input id="email" type="email">
-                <p></p>
-            </div>
 
-            <div class="form-control">
                 <label for="telefono">Teléfono</label>
                 <input id="Telefono" type="text">
-                <p></p>
-            </div>
 
-            <button>Enviar</button>
-        </form>
-    </div>
-    <script src="java.js"></script>
+                
+                <input type="button" onclick="comprobar()" value="Enviar formulario">
+                
+                </fieldset>
+
+
+    <script>
+       
+    function comprobar(){
+        // compruebo que el campo nombre no este vacio
+        if(document.formcontrol.fname.value==""){
+            alert("No has rellenado el campo nombre");
+        }else{
+            ///seguirian las comprobaciones
+            //enviaria el formulario
+            
+        }
+
+         // compruebo que el campo nombre no este vacio
+         if(document.formcontrol.apellido.value==""){
+            alert("No has rellenado el campo apellido");
+        }
+            ///seguirian las comprobaciones
+            //enviaria el formulario
+            document.forms[0].submit();
+        
+    }
+
+
+    </script>
 </body>
 </html>
